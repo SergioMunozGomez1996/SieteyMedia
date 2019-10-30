@@ -14,6 +14,10 @@
 		C7979E3A2368977000D29D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7979E392368977000D29D75 /* Assets.xcassets */; };
 		C7979E3D2368977000D29D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7979E3B2368977000D29D75 /* LaunchScreen.storyboard */; };
 		C7979E482368977000D29D75 /* SieteyMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7979E472368977000D29D75 /* SieteyMediaTests.swift */; };
+		C7979E53236898BB00D29D75 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7979E52236898BB00D29D75 /* Carta.swift */; };
+		C7979E552368990000D29D75 /* Mano.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7979E542368990000D29D75 /* Mano.swift */; };
+		C7979E572368993400D29D75 /* Baraja.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7979E562368993400D29D75 /* Baraja.swift */; };
+		C7979E5B2368A0BF00D29D75 /* Juego.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7979E5A2368A0BF00D29D75 /* Juego.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		C7979E432368977000D29D75 /* SieteyMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SieteyMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7979E472368977000D29D75 /* SieteyMediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SieteyMediaTests.swift; sourceTree = "<group>"; };
 		C7979E492368977000D29D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7979E52236898BB00D29D75 /* Carta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
+		C7979E542368990000D29D75 /* Mano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mano.swift; sourceTree = "<group>"; };
+		C7979E562368993400D29D75 /* Baraja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baraja.swift; sourceTree = "<group>"; };
+		C7979E5A2368A0BF00D29D75 /* Juego.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juego.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,10 @@
 				C7979E392368977000D29D75 /* Assets.xcassets */,
 				C7979E3B2368977000D29D75 /* LaunchScreen.storyboard */,
 				C7979E3E2368977000D29D75 /* Info.plist */,
+				C7979E52236898BB00D29D75 /* Carta.swift */,
+				C7979E542368990000D29D75 /* Mano.swift */,
+				C7979E562368993400D29D75 /* Baraja.swift */,
+				C7979E5A2368A0BF00D29D75 /* Juego.swift */,
 			);
 			path = SieteyMedia;
 			sourceTree = "<group>";
@@ -201,8 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7979E352368976F00D29D75 /* ViewController.swift in Sources */,
+				C7979E53236898BB00D29D75 /* Carta.swift in Sources */,
+				C7979E572368993400D29D75 /* Baraja.swift in Sources */,
 				C7979E312368976F00D29D75 /* AppDelegate.swift in Sources */,
 				C7979E332368976F00D29D75 /* SceneDelegate.swift in Sources */,
+				C7979E5B2368A0BF00D29D75 /* Juego.swift in Sources */,
+				C7979E552368990000D29D75 /* Mano.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
