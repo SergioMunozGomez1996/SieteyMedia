@@ -8,14 +8,24 @@
 
 import Foundation
 
+enum estadoJuego {
+    case ganas, pierdes
+}
 class Juego{
     var manoJugador:Mano
     var baraja:Baraja
     var total:Float=0
+    var estado : estadoJuego!
+    var manoCasa:Float=0
     
     init() {
         self.manoJugador = Mano()
         self.baraja = Baraja()
+    }
+    func notificarFin() {
+        let nc = NotificationCenter.default
+        nc.post(name: NSNotification.Name(rawValue:"fin_juego"),
+                object: nil, userInfo: ["resultado":self.estado!, "maquina":String(self.manoCasa)])
     }
     func sumarPuntosMano(){
         self.total = 0
@@ -41,7 +51,6 @@ class Juego{
     }
     
     func plantarse(){
-        var manoCasa:Float
         var media:Int
         manoCasa = Float(Int.random(in: 1...7))
         media = Int.random(in: 0...1)
@@ -51,8 +60,12 @@ class Juego{
         print("La máquina ha sacado " + String(manoCasa))
         if(self.total<=7.5 && self.total>manoCasa){
             print("Has ganado")
+            self.estado = .ganas
+            notificarFin()
         }else{
             print("Has perdido")
+            self.estado = .pierdes
+            notificarFin()
         }
     }
 }

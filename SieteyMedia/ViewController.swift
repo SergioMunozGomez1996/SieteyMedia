@@ -18,12 +18,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.juegoTerminado),
+        name: NSNotification.Name(rawValue: "fin_juego"), object: nil)
     }
-
+    
+    @objc func juegoTerminado(notificacion : Notification) {
+        if let userInfo = notificacion.userInfo {
+            var mensaje : String
+            let maquinaResultado : String = userInfo["maquina"] as! String
+            switch userInfo["resultado"] as! estadoJuego {
+                case .ganas: mensaje = "¡Has ganado!" + "La máquina ha sacado un " + maquinaResultado
+                case .pierdes : mensaje = "¡Has perdido!" + "La máquina ha sacado un " + maquinaResultado
+            }
+            let alert = UIAlertController(
+                title: "Fin del juego",
+                message: mensaje,
+                preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(
+                title: "OK",
+                style: UIAlertAction.Style.default)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     @IBAction func pedirCartaButton(_ sender: Any) {
         juego.sacarCarta()
-        var carta = juego.manoJugador.getCarta(posicion: self.cartasCount)!
+        let carta = juego.manoJugador.getCarta(posicion: self.cartasCount)!
         dibujarCarta(carta: carta, enPosicion: cartasCount)
         self.cartasCount+=1
     }
